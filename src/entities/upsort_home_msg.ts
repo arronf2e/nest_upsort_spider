@@ -7,7 +7,9 @@ export class UpsortHomeMsg {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({
+    length: 2000
+  })
   content: string;
 
   @Column()

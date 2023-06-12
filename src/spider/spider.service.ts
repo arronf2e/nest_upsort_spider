@@ -20,12 +20,12 @@ export class SpiderService {
     try {
       const result: AxiosResponse<any> = await axios.get(`${url}`)
       const { data, code } = result?.data
-      if(data?.length) {
+      if(data?.length && code === 0) {
         await this.saveUpsortHomeMsgData(data)
         this.logger.debug('Called page: success');
       }
     }catch (e) {
-
+      this.logger.error('Called page failed:', e);
     }
   }
 
