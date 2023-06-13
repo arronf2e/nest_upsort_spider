@@ -20,7 +20,7 @@ import {UpsortHomeMsg} from "../entities/upsort_home_msg";
           charset: configService.get<string>('DATABASE_CHARSET'),
           // entities: [UpsortHomeMsg],
           autoLoadEntities: true,
-          synchronize: true,
+          // synchronize: true,
         } as ConnectionOptions
       },
       inject: [ConfigService]

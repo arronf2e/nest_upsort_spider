@@ -27,6 +27,7 @@
     "@nestjs/schedule": "^2.2.3",
     "@nestjs/typeorm": "^9.0.1",
     "axios": "^1.4.0",
+    "cheerio": "1.0.0-rc.12",
     "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",

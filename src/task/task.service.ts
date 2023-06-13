@@ -7,9 +7,10 @@ import {ConfigService} from "@nestjs/config";
 export class TaskService {
   private readonly logger = new Logger(TaskService.name)
   constructor(private readonly spiderService: SpiderService) {}
-  @Cron('*/20 * * * * *')
+  @Cron('*/10 * * * * *')
   async handleCron() {
     this.logger.debug('Called per second 20');
     await this.spiderService.getUpsortHomeMsg()
+    await this.spiderService.getHotNews()
   }
 }

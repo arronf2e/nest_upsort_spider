@@ -8,9 +8,10 @@ import { SpiderService } from './spider/spider.service';
 import { TaskService } from './task/task.service';
 import {ScheduleModule} from "@nestjs/schedule";
 import {ConfigService} from "@nestjs/config";
+import {UpsortHotNews} from "./entities/upsort_hot_news";
 
 @Module({
-  imports: [DatabaseModule, TypeOrmModule.forFeature([UpsortHomeMsg]), ScheduleModule.forRoot()],
+  imports: [DatabaseModule, TypeOrmModule.forFeature([UpsortHomeMsg, UpsortHotNews]), ScheduleModule.forRoot()],
   controllers: [AppController],
   providers: [AppService, SpiderService, TaskService, ConfigService],
 })
